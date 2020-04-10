@@ -1,0 +1,55 @@
+body {
+    display: grid;
+    background-color: rgb(177, 174, 174);
+    margin: auto 10px;
+
+}
+header {
+    text-align: center;
+    font-size: 80px;
+    
+    
+    
+}
+h1 {
+    text-align: center;
+}
+ul {
+    border: 10px solid black;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.instructions {
+    font-size: 30px;
+    align-content: center;
+    
+}
+.button{
+    font-size: 50px;
+}
+.container {
+    border: 10px solid black;
+    height: 300px;
+    /* width: 95%;
+    height: ; */
+    background-color: white;
+}
+.word-section {
+    background-color: white;
+    border: 10px solid black;
+    /* width: 95%; */
+    height: 80px;
+
+}
+footer {
+    border-top: 10px solid black;
+    
+
+}
+.letter-button-section {
+    height: 30px;
+}
+.undo-button {
+
+}

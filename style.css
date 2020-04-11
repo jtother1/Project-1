@@ -30,12 +30,12 @@ ul {
 }
 .container {
     border: 10px solid black;
-    height: 300px;
+    /* height: 50px; */
     /* width: 95%;
     height: ; */
-    background-color: white;
+    /* background-color: white; */
 }
-.word-section {
+.gameboard {
     background-color: white;
     border: 10px solid black;
     /* width: 95%; */
@@ -47,9 +47,12 @@ footer {
     
 
 }
-.letter-button-section {
+.button-letters {
     height: 30px;
 }
 .undo-button {
 
 }
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles */
+    }

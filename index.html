@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="width=device-width,initial-scale">
     <link rel="stylesheet" href="style.css">
+    <img src="" alt="" srcset="">
     <title>Hangman Game</title>
 
 </head>
@@ -13,54 +15,51 @@
     <p class="instructions">
         <h1>Instructions</h1>
         <ul>
-            <li>
-                Click a letter.
-            </li>
-            <li>
-                If you pick a correct letter in the mystery word it will turn green and appear in the spaces where letters are located in the word. 
-            </li>
-            <li>
-                If a letter is wrong it will turn red and you must draw a bodypart of the hangman's body. (Example head, body, one hand, one leg)
-            </li>
-            <li>
-                If player chooses wrong six times the hangman has been created and the player loses.
-            </li>
+            <li>Object of the game is to reveal the correct word before the hangman is drawn.</li>
+            <li>Click a letter.</li>
+            <li>If you pick a correct letter in the mystery word it will turn green and appear in the spaces where letters are located in the word.</li>
+            <li>If a letter is wrong it will turn red and a part of the hangman will appear. (Ex. head, body, one arm, etc.)</li>
+            <li>If player chooses wrong nine times the hangman has been created and the player loses.</li>
         </ul>
     </p>
     <section class="container">
-        <p>Hangman box</p>
+        <p>
+            
+        </p>
     </section>
     <button class="undoButton">Undo</button>
-    <section class="word-section">
+    <section class="gameboard">
         <p>Where the words will be ______ _____ ____ _________</p>
     </section>
-    <section class="letter-button-section">
-        <button class="a">A</button>
-        <button class="b">B</button>
-        <button class="c">C</button>
-        <button class="d">D</button>
-        <button class="e">E</button>
-        <button class="f">F</button>
-        <button class="g">G</button>
-        <button class="h">H</button>
-        <button class="i">I</button>
-        <button class="j">J</button>
-        <button class="k">K</button>
-        <button class="l">L</button>
-        <button class="m">M</button>
-        <button class="n">N</button>
-        <button class="o">O</button>
-        <button class="p">P</button>
-        <button class="q">Q</button>
-        <button class="r">R</button>
-        <button class="s">S</button>
-        <button class="t">T</button>
-        <button class="u">U</button>
-        <button class="v">V</button>
-        <button class="w">W</button>
-        <button class="x">X</button>
-        <button class="y">Y</button>
-        <button class="z">Z</button>
+    <section class="button-letters">
+        <button class="A">A</button>
+        <button class="B">B</button>
+        <button class="C">C</button>
+        <button class="D">D</button>
+        <button class="E">E</button>
+        <button class="F">F</button>
+        <button class="G">G</button>
+        <button class="H">H</button>
+        <button class="I">I</button>
+        <button class="J">J</button>
+        <button class="K">A</button>
+        <button class="L">L</button>
+        <button class="M">M</button>
+        <button class="N">N</button>
+        <button class="O">O</button>
+        <button class="P">P</button>
+        <button class="Q">Q</button>
+        <button class="R">R</button>
+        <button class="S">S</button>
+        <button class="T">T</button>
+        <button class="U">U</button>
+        <button class="V">V</button>
+        <button class="W">W</button>
+        <button class="X">x</button>
+        <button class="Y">Y</button>
+        <button class="Z">Z</button>
+
+
     </section>
 <footer>Created by: Juan Quiroz</footer>
 <script src="app.js"></script>

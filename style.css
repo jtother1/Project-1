@@ -14,32 +14,50 @@ header {
 h1 {
     text-align: center;
 }
+h2 {
+    font-size: 60px;
+}
 ul {
-    border: 10px solid black;
+    border: 8px dotted black;
     font-size: 25px;
     padding-top: 10px;
     padding-bottom: 10px;
+    
+}
+.hangmanboard {
+    margin: auto;
+    background-color: white;
+    height: 400px;
+    width: 700px;
 }
 .instructions {
     font-size: 30px;
     align-content: center;
     
 }
-.button{
-    font-size: 50px;
+button{
+    font-size: 30px;
+    padding: 10px;
+    /* width: 60%; */
+    height: 50%;
+    width:10%;
 }
 .container {
-    border: 10px solid black;
-    /* height: 50px; */
-    /* width: 95%;
-    height: ; */
-    /* background-color: white; */
+    border: 6px solid black;
+    font-size: 30px;
+    align-content: center;
+
 }
-.gameboard {
+
+.wordboard {
+    text-align: center;
     background-color: white;
-    border: 10px solid black;
+    /* border: 3px solid black; */
     /* width: 95%; */
-    height: 80px;
+    height: 100px;
+    width: 700px;
+    margin: auto;
+    padding-bottom: 15px;
 
 }
 footer {
@@ -47,11 +65,9 @@ footer {
     
 
 }
-.button-letters {
-    height: 30px;
-}
-.undo-button {
 
+.undo-button {
+    
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /* Styles */

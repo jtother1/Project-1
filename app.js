@@ -1,12 +1,19 @@
 //created words for game
-let words = ['JAZZ', 'COUNTRY', 'BLUEGRASS'];
-console.log(words);
-const letters = document.querySelector('.button-letters').innerText;{
-letters.addEventListener('click', handleButtonClick) 
-    function handleButtonClick() {
-        console.log(letters);
+const word = ['JAZZ', 'PEANUTS', 'TRANSYLVANIA','AMPHIBIAN'];
+//making them show up on random mode
+const random = Math.floor(Math.random() * word.length);
+const randomWord = word[random];
+const space = [];
+//making spaces for number of letters in each word
+const spacesAppear = function() {
+    for(let i = 0; i < randomWord.length; i++) {
+       space.push('_'); 
     }
+    return space;
 }
+console.log(spacesAppear());
+
+
 
 
 

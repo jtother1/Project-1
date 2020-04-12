@@ -10,58 +10,61 @@
 
 </head>
 
-<header>HANGMAN</header>
 <body>
-    <p class="instructions">
-        <h1>Instructions</h1>
-        <ul>
-            <li>Object of the game is to reveal the correct word before the hangman is drawn.</li>
-            <li>Click a letter.</li>
-            <li>If you pick a correct letter in the mystery word it will turn green and appear in the spaces where letters are located in the word.</li>
-            <li>If a letter is wrong it will turn red and a part of the hangman will appear. (Ex. head, body, one arm, etc.)</li>
-            <li>If player chooses wrong nine times the hangman has been created and the player loses.</li>
-        </ul>
-    </p>
     <section class="container">
+        <header>
+            <h1>Hangman</h1>
+            <h2>Instructions</h2>
+        </header>
         <p>
+            <section>
+                <ul>
+                    <li>Object of the game is to reveal the correct word before the hangman is drawn.</li>
+                    <li>Click a letter.</li>
+                    <li>If you pick a correct letter in the mystery word it will turn green and appear in the spaces where letters are located in the word.</li>
+                    <li>If a letter is wrong it will turn red and a part of the hangman will appear. (Ex. head, body, one arm, etc.)</li>
+                    <li>If player chooses wrong nine times the hangman has been created and the player loses.</li>
+                </ul>
+                <button class="undoButton">Undo</button>
+                <p class="hangmanboard"></p>
+                    
+                <p class="wordboard">_ _ _ _</p>
+                <section class="letterbuttons">
+                    <button>A</button>
+                    <button>B</button>
+                    <button>C</button>
+                    <button>D</button>
+                    <button>E</button>
+                    <button>F</button>
+                    <button>G</button>
+                    <button>H</button>
+                    <button>I</button>
+                    <button>J</button>
+                    <button>A</button>
+                    <button>L</button>
+                    <button>M</button>
+                    <button>N</button>
+                    <button>O</button>
+                    <button>P</button>
+                    <button>Q</button>
+                    <button>R</button>
+                    <button>S</button>
+                    <button>T</button>
+                    <button>U</button>
+                    <button>V</button>
+                    <button>W</button>
+                    <button>x</button>
+                    <button>Y</button>
+                    <button>Z</button>
+                </section>
+                
             
-        </p>
+            
+            
+            </section>
+    
     </section>
-    <button class="undoButton">Undo</button>
-    <section class="gameboard">
-        <p>Where the words will be ______ _____ ____ _________</p>
-    </section>
-    <section class="button-letters">
-        <button class="A">A</button>
-        <button class="B">B</button>
-        <button class="C">C</button>
-        <button class="D">D</button>
-        <button class="E">E</button>
-        <button class="F">F</button>
-        <button class="G">G</button>
-        <button class="H">H</button>
-        <button class="I">I</button>
-        <button class="J">J</button>
-        <button class="K">A</button>
-        <button class="L">L</button>
-        <button class="M">M</button>
-        <button class="N">N</button>
-        <button class="O">O</button>
-        <button class="P">P</button>
-        <button class="Q">Q</button>
-        <button class="R">R</button>
-        <button class="S">S</button>
-        <button class="T">T</button>
-        <button class="U">U</button>
-        <button class="V">V</button>
-        <button class="W">W</button>
-        <button class="X">x</button>
-        <button class="Y">Y</button>
-        <button class="Z">Z</button>
-
-
-    </section>
-<footer>Created by: Juan Quiroz</footer>
-<script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
+<footer>Created by: Juan Quiroz</footer>
 </html>

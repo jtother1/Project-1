@@ -24,12 +24,6 @@ ul {
     padding-bottom: 10px;
     
 }
-.hangmanboard {
-    margin: auto;
-    background-color: white;
-    height: 400px;
-    width: 700px;
-}
 .instructions {
     font-size: 30px;
     align-content: center;
@@ -48,17 +42,26 @@ button{
     align-content: center;
 
 }
-
-.wordboard {
+.game-container{
+    padding: 10px;
+    width:90%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#fff;
     text-align: center;
-    background-color: white;
+}
+.hangmanboard img{
+    width: 60%;
+}
+#wordboard {
     /* border: 3px solid black; */
     /* width: 95%; */
-    height: 100px;
-    width: 700px;
-    margin: auto;
-    padding-bottom: 15px;
-
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+#wordboard span{
+    margin-right: 5px;
 }
 footer {
     border-top: 10px solid black;

@@ -1,57 +1,96 @@
 //created words for game
-const word = ['JAZZ', 'PEANUTS', 'TRANSYLVANIA','AMPHIBIAN'];
+const words = ['JAZZ', 'PEANUTS', 'TRANSYLVANIA', 'AMPHIBIAN','TRAIL','BICYCLE','FREEDOM','FREEZE'];
 //making them show up on random mode
-const random = Math.floor(Math.random() * word.length);
-const randomWord = word[random];
-console.log(randomWord);
-const space = [];
-let mistakeCounter = 0;
-let attemptCounter  = 0;
-//making spaces for number of letters in each word
-const spacesAppear = function() {
-    for(let i = 0; i < randomWord.length; i++) { 
-        let  wordboard = document.getElementById('wordboard');
-        wordboard.innerHTML = wordboard.innerHTML + '<span id="space'+i+'">_</span>';
-    }
-}
-spacesAppear();
+const random = Math.floor(Math.random() * words.length);
+const randomWord = words[random];
+// console.log(randomWord);
 
-const showImage = function(mistakeCount){
-    document.getElementById('hangman-image').src = "images/hangman"+mistakeCount+".png";
-}
-const showLetter = function(letter){
-    for(let i = 0; i < randomWord.length; i++) { 
-        if(randomWord[i] === letter){
-            document.getElementById("space"+i).innerHTML = letter;
+
+const correctLetters = [];
+const wrongLetters = [];
+let displayCharacters = [];
+
+function updateDisplayCharacters() {
+    displayCharacters = [];
+    for (let i = 0; i < randomWord.length; i++) {
+        //if we guessed the correct letter put in the letter if not an underscore
+        if (correctLetters.includes(randomWord[i])) {
+            displayCharacters.push(randomWord[i]);
+
+
+        } else {
+
+            displayCharacters.push('_');
         }
     }
 }
-//make buttons functional
-/*document.getElementById('button-a').onclick = function(e){
-    console.log('A');
+updateDisplayCharacters();
+displayBoard();
+
+
+function displayBoard() {
+    wordboard.innerHTML = '';
+    for (let i = 0; i < displayCharacters.length; i++) {
+//span makes empty underscore for every letter to be guessed
+        wordboard.innerHTML = wordboard.innerHTML + '<span>' + displayCharacters[i] + '</span>';
+    }
 }
-document.getElementById('button-b').onclick = function(){
-    console.log('B');
-}*/
-const buttons = document.getElementsByTagName('button');
-console.log(buttons);
-for(var i=0; i<buttons.length; i++){
-    buttons[i].addEventListener("click",function(e){ 
-        let currentLetter = e.target.innerText;
-        if(randomWord[attemptCounter] !== currentLetter){
-            mistakeCounter++;
-            showImage(mistakeCounter);
-            //console.log(mistakeCounter);
-        }else{
-            showLetter(currentLetter);
+displayBoard();
+
+function changeButtonColor(isCorrect, letter) {
+    let selectedButton
+    for (i = 0; i < buttons.length; i++) {
+        const currentButton = buttons[i];
+        if (currentButton.textContent === letter) {
+            selectedButton = currentButton;
         }
-        attemptCounter++;
-    });
+    }
+    selectedButton.disabled = true;
+    if (isCorrect) {
+        selectedButton.style.color = 'green';
+    } else {
+        selectedButton.style.color = 'red';
+    }
 }
-//buttons.addEventListener('click', handleButtonClick)
+//function for win or lose alerts
+function checkWinOrLose() {
+    if(!displayCharacters.includes('_')) {
+        alert('You win!');
+    }
+    if(wrongLetters.length >= 9) {
+        alert('You lose');
+    }
+}
+//hangman images get updated to show each time a wrong button clicked
+const hangmanImage = document.querySelector('#hangman-image');
+function updateImage() {
+    hangmanImage.src = `/images/hangman${wrongLetters.length}.png`;
+}
+function refreshPage() {
+    window.location.reload();
+}
+//button click 
+const buttons = document.querySelectorAll('.letter-btn');
 
+buttons.forEach(btn => btn.addEventListener('click', handleButtonClick))
 
-
-
-
-
+function handleButtonClick() {
+    // console.log(this);
+    const letter = this.textContent;
+    
+    if (randomWord.includes(letter)) {
+        //correct guess
+        correctLetters.push(letter);
+        changeButtonColor(true, letter);
+        
+    } else {
+        wrongLetters.push(letter);
+        changeButtonColor(false, letter);
+        
+    }
+    updateDisplayCharacters();
+    displayBoard();
+    updateImage();
+    checkWinOrLose();
+    
+}

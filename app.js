@@ -1,5 +1,5 @@
 //created words for game
-const words = ['JAZZ', 'PEANUTS', 'TRANSYLVANIA', 'AMPHIBIAN', 'TRAIL', 'BICYCLE', 'FREEDOM', 'FREEZE'];
+const words = ['JAZZ', 'PEANUT', 'TRANSYLVANIA', 'AMPHIBIAN', 'TRAIL', 'BICYCLE', 'FREEDOM', 'FREEZE','GUACAMOLE', 'INTERNET', 'ROCKET'];
 //making them show up on random mode
 let randomWord
 // console.log(randomWord);

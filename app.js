@@ -93,11 +93,12 @@ function checkWinOrLose() {
         alertMessage.textContent = 'You lose!';
     }
 }
-//hangman images get updated to show each time a wrong button clicked
+//getting images from class 
 const hangmanImage = document.querySelector('#hangman-image');
 
+//hangman images get updated to show each time a wrong button clicked
 function updateImage() {
-    hangmanImage.src = `/images/hangman${wrongLetters.length}.png`;
+    hangmanImage.src = `./images/hangman${wrongLetters.length}.png`;
 }
 
 //button click 

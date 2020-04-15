@@ -1,0 +1,128 @@
+body {
+    display: grid;
+    background-color: rgb(177, 174, 174);
+    margin: auto 10px;
+    
+
+
+}
+
+header {
+    text-align: center;
+    font-size: 80px;
+
+
+
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+ul {
+    border: 8px solid black;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.instructions {
+    font-size: 30px;
+    align-content: center;
+
+}
+
+button {
+    font-size: 30px;
+    padding: 10px;
+    /* width: 60%; */
+    height: 50%;
+    width: 10%;
+}
+
+/* .container {
+    border: 6px solid black;
+    font-size: 30px;
+    align-content: center;
+
+} */
+.alert.alert-hidden {
+    display: none;
+
+}
+
+.alert-body button {
+    width: 100%;
+
+}
+
+.alert-body {
+    background-color: blue;
+    font-size: 50px;
+    color: white;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.alert {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .3);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.game-container {
+    padding: 10px;
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff;
+    text-align: center;
+    margin: auto;
+    
+}
+
+.hangmanboard img {
+    width: 100%;
+    height: 100%;
+}
+
+#wordboard {
+    /* border: 3px solid black; */
+    /* width: 95%; */
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 50px;
+}
+
+#wordboard span {
+    margin-right: 5px;
+}
+
+footer {
+    border-top: 10px solid black;
+
+
+}
+
+@media (min-width:600px) {
+    p {
+        font-size: 1.25;
+    }
+}
+@media (min-width: 800px) {
+    p{
+        line-height: 1.5px;
+    }
+}

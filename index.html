@@ -12,6 +12,12 @@
 </head>
 
 <body>
+    <div class="alert alert-hidden">
+        <div class="alert-body">
+            <div class="alert-message"></div>
+            <button class="startgame" onclick="reset()">Play again</button>
+        </div>
+    </div>
     <section class="container">
         <header>
             <h1>Hangman</h1>
@@ -28,7 +34,6 @@
                         one arm, etc.)</li>
                     <li>If player chooses wrong nine times the hangman has been created and the player loses.</li>
                 </ul>
-                <button class="startgame" onclick="refreshPage()">Play again</button>
                 <div class="game-container">
                     <div class="hangmanboard">
                         <img id="hangman-image" src="images/hangman0.png">

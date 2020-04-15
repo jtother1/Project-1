@@ -2,6 +2,7 @@ body {
     display: grid;
     background-color: rgb(177, 174, 174);
     margin: auto 10px;
+    
 
 
 }
@@ -86,10 +87,9 @@ button {
     padding: 10px;
     width: 90%;
     max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
     background-color: #fff;
     text-align: center;
+    margin: auto;
     
 }
 

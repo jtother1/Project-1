@@ -4,11 +4,11 @@ const words = ['JAZZ', 'PEANUT', 'TRANSYLVANIA', 'AMPHIBIAN', 'TRAIL', 'BICYCLE'
 let randomWord
 // console.log(randomWord);
 
-
+//making empty variables in order to use in different functions 
 let correctLetters = [];
 let wrongLetters = [];
 let displayCharacters = [];
-
+//for loop to display the letters based on the length of the random word spit out
 function updateDisplayCharacters() {
     displayCharacters = [];
     for (let i = 0; i < randomWord.length; i++) {
@@ -18,14 +18,14 @@ function updateDisplayCharacters() {
 
 
         } else {
-
+//displays empty _ underscores when a letter of the word hasnt been picked
             displayCharacters.push('_');
         }
     }
 }
 
 
-
+//diaplays 
 function displayBoard() {
     wordboard.innerHTML = '';
     for (let i = 0; i < displayCharacters.length; i++) {
@@ -34,7 +34,7 @@ function displayBoard() {
     }
 }
 
-
+//for every correct and wrong letter turn a color to signify it has been used and is true or false
 function changeButtonColor(isCorrect, letter) {
     let selectedButton
     for (i = 0; i < buttons.length; i++) {
@@ -43,14 +43,14 @@ function changeButtonColor(isCorrect, letter) {
             selectedButton = currentButton;
         }
     }
-    selectedButton.disabled = true;
+    selectedButton.disabled = true;  //disables multiple attempts to press buttons
     if (isCorrect) {
         selectedButton.style.color = 'green';
     } else {
         selectedButton.style.color = 'red';
     }
 }
-
+//function that gives user a brand new board when play again is clicked
 function reset() {
     const random = Math.floor(Math.random() * words.length);
     randomWord = words[random]
@@ -69,7 +69,7 @@ function reset() {
 function resetButtons() {
     // buttons
     for (let i = 0; i < buttons.length; i++) {
-        const currentButton = buttons[i] // the current button we are on in the loop
+        const currentButton = buttons[i] // the current button on in the loop
         // change disabled to false
         currentButton.disabled = false
 
@@ -99,10 +99,7 @@ const hangmanImage = document.querySelector('#hangman-image');
 function updateImage() {
     hangmanImage.src = `/images/hangman${wrongLetters.length}.png`;
 }
-//added funtion to restart game button
-function refreshPage() {
-    window.location.reload();
-}
+
 //button click 
 const buttons = document.querySelectorAll('.letter-btn');
 //using for each to create the click function
